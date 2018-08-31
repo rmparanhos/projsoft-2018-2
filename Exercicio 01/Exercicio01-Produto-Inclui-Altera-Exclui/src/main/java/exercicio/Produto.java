@@ -1,5 +1,8 @@
 package exercicio;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -13,7 +16,9 @@ import javax.persistence.Transient;
 
 
 @Entity
-@Table(name="PRODUTO")
+@DynamicUpdate
+@DynamicInsert
+@Table(name="produto")
 // @SequenceGenerator(name="SEQUENCIA", 
 //	                  sequenceName="SEQ_PRODUTO",
 //                    allocationSize=1)
